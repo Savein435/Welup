@@ -5,6 +5,7 @@
     <classes>
       <class name="tester.WelUp">
         <methods>
+          <include name="cleanup"/>
           <include name="EmployerOnboard"/>
           <include name="setup"/>
         </methods>

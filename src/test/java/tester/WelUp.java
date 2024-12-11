@@ -1,34 +1,46 @@
 package tester;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
 public class WelUp {
 
     WebDriver driver;
     String URL = "https://qa.welup.savein.money/signup";
-    
+
     @BeforeMethod
     public void setup() {
-        // Set up WebDriver and configure the browser settings
+        // Set up WebDriverManager for ChromeDriver (only needed locally)
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        // Initialize ChromeOptions
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+
+        try {
+            // Initialize RemoteWebDriver
+            driver = new RemoteWebDriver(
+                new URL("https://user:Asdf1234@selenium-chrome.bikaneri.in/wd/hub"),
+                options
+            );
+        } catch (MalformedURLException e) {
+            System.out.println("The URL provided is malformed: " + e.getMessage());
+        }
+
+        // Configure browser settings
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
-    
     @AfterMethod
     public void cleanup() {
         // Close the browser after each test

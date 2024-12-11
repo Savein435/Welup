@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,45 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="tester.WelUp" class="method navigator-link" hash-for-method="EmployerOnboard">EmployerOnboard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tester.WelUp" class="method navigator-link" hash-for-method="AddEmployee">AddEmployee</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tester.WelUp" class="method navigator-link" hash-for-method="DeleteEmployee">DeleteEmployee</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tester.WelUp" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -143,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">tester.WelUp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -154,35 +130,26 @@
                   <a name="EmployerOnboard">
                   </a> <!-- EmployerOnboard -->
                   <span class="method-name">EmployerOnboard</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector
-from javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;An invalid or illegal selector was specified&quot;}
-  (Session info: chrome=131.0.6778.139)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.6.3&apos;, java.version: &apos;22&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6dfc14ce8960a9781470ac635b3c7c66, findElement {value=//button[normalize-space()=&apos;Continue&apos;], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.139, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: /var/folders/ky/71_r8yx13y9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57275/devtoo..., se:cdpVersion: 131.0.6778.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6dfc14ce8960a9781470ac635b3c7c66
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Unable to parse remote response: &lt;!DOCTYPE html&gt;&lt;html lang=&quot;en-US&quot;&gt;&lt;head&gt;&lt;title&gt;Just a moment...&lt;/title&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&gt;&lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;style&gt;*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;max-width:60rem;padding-left:1.5rem}@media (width &lt;= 720px){.main-content{margin-top:4rem}}.h2{font-size:1.5rem;font-weight:500;line-height:2.25rem}@media (width &lt;= 720px){.h2{font-size:1.25rem;line-height:1.5rem}}#challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+);background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme:dark){body{background-color:#222;color:#d9d9d9}}&lt;/style&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;390&quot;&gt;&lt;/head&gt;&lt;body class=&quot;no-js&quot;&gt;&lt;div class=&quot;main-wrapper&quot; role=&quot;main&quot;&gt;&lt;div class=&quot;main-content&quot;&gt;&lt;noscript&gt;&lt;div class=&quot;h2&quot;&gt;&lt;span id=&quot;challenge-error-text&quot;&gt;Enable JavaScript and cookies to continue&lt;/span&gt;&lt;/div&gt;&lt;/noscript&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;(function(){window._cf_chl_opt={cvId: &apos;3&apos;,cZone: &quot;selenium-chrome.bikaneri.in&quot;,cType: &apos;managed&apos;,cRay: &apos;8f06fe5adc10483e&apos;,cH: &apos;PgMxyQsFuIWpWz71Khka5w6X22.Lvgg.TrWa48IGyz4-1733936035-1.2.1.1-3ia6vGOyTuFxepA_1ccfIyizfz1mJn6Sz02pePjPfvib1L1uHidU9A5lYn5zHoxz&apos;,cUPMDTk: &quot;\/wd\/hub\/session?__cf_chl_tk=fHpYm0sd4uvmQ5febEOETCw7E6tVCsAm82dhgX4F3_g-1733936035-1.0.1.1-6e_BpL.jakofRaxz1faggIMkLfpeW2vo8tgLbsPaWOg&quot;,cFPWv: &apos;g&apos;,cITimeS: &apos;1733936035&apos;,cTTimeMs: &apos;1000&apos;,cMTimeMs: &apos;390000&apos;,cTplC: 0,cTplV: 5,cTplB: &apos;cf&apos;,cK: &quot;&quot;,fa: &quot;\/wd\/hub\/session?__cf_chl_f_tk=fHpYm0sd4uvmQ5febEOETCw7E6tVCsAm82dhgX4F3_g-1733936035-1.0.1.1-6e_BpL.jakofRaxz1faggIMkLfpeW2vo8tgLbsPaWOg&quot;,md: &quot;AygAhxZ26viNAlAPvH5ehfrqcQEvZXsq9.XWiv.WiCw-1733936035-1.2.1.1-j36ieBbbTUAo.DUILrE5xy.5E_uzbwKwJT77V70Y_KVxmNHIBPAqpYRpWc0l4vi28FArRZwRFPGxt3PbDihVlYOj_YwlsBQ5NM5jQxLfSVAldSCp47lUTbcj7_kl6tzCf6KDNSyc6YcIz7.Ek5Seafx90kttujeg3iv5nWHelM1bwWiKGqfObr6vYSjOSO5koVYF2.QKG92GtKWcPS7KdQMWb6gU1bxUQaCQJAB2CheZtWI6RfReDS1oSRM72uID3yD1Ko6q508zj5Mb9XWN1O8SDvAm.8GySmyzSNuLD4Lkd7b8wxWJrsfTl2Phu_tRwLkmAC.eUehm4Ljs5o0OOi_OUldi4bUTGRp651kO93V.nFYLLaeRPLbbJJO4t06nIiQ5z.G4HrtFiJDVw9Evn5eL45nvh4OVraCbkrGXzpyzbBrX3jO1RAysRNW85QLtuqmCL.tINwnV0BPOGujhp113hWhDebhpqOoPpzNe7NqTFqegaYRp1UFRgFUOn2BvmIf6kH1jxzD1KKwIEkLjs4.bPUlrkp84JlG1zZrAe7wL3qVzaFwIRvft.F.Nc3MGdmL17fKsASVbl9hPMzmusdqsI1WeFyEJCOyOFAPMHU.922OyqbLWDVDr2SLZfXRvpN5t3nLVFI8qTzwTYPKh2n1NoC0FxK6ct.Gxe3LQth38LfiT7KiruwEBY2gKN8_Yqb4U3EYHweccxps4F.hPL1y6n8UMBP6fnl1ZYM_OSHBdaXNTeGSyvCU.r9iAvTB4o0tO23aGQh6mWTC4pTuAvcq6KZuotZAU6ylwAxKnS8BnPrqGy0m.9Vx1aZlR5Q_ZStTDiZyxKng3VP1VbvKCvbBH9nuT7OqvK6Nz3Ut0WZoCPrmzU3xr9.G94ff0QpHONEsVQmRq0fC.9ckRagADWLCzHfmuK3h1pIJqZWE0VWBkSi0wOWEgHaPt0X9ZFlirdHCHOQDRA0xg1vMj4s_UUmTZdxFeLK8wjPCfk5_h9krXuoRAIdvaDBeKYQjQpXzN1S5pyH4lzGILSOXJKJ3ErAVe6Ai3yUcc_nog4h6zyGS3VR0NUQAMXRbqxVJ2nSxKgneG7VowQ.ovkOmu1xHAlypzCDN9CVFFC5pUq1dQO.1SclHp1NhGzr9FUbrH9ik266J4blY.vl4MYMJvb9CRFWUVPiESzjkLffbeq6v8jQ6Iw1mvCo57nttWFya.KOW9M0QRqivGIf.Bjf6wesYhtjjV_9sJYKDmljUA49nc8OL.GIyejXKlJeOWKRngqg7BxRLgGZb8AXq.WfYNzphQe.nxQZdJw6nMgg25A2c9.YqjhmzVsDpAdd35ywyaPrXol7sO47FNEziNnpxtBQBw6OgoHxBDSbYGhAbYZKrqMNqC_IKBTYAyNRchNFM8o2Ttz3Q5IBFxc_.vQ9UZy3gSkcxHjJXybKkVrTzL2.RA9QVWhJNt.i.jAqBpKPSYGqo3h.PdGuxUKH72nrFdOUjoUOj2hbcI_Id1As70Zk6LUaf77hg4Q1.6kgQw45lm54oxx9o02WGh8yEotv4IB4HvkYRenBj.lA2GOUuAEIaIc6PWkF.SXxcj.VYm4FuhEgVaqnRE1yTv73NnNPX2Npx2pduDpyL4ICVQtz.p4YXym7mV0sF_Dq9IujitrmbdmhGxRRq6cvZNCYDECzbu3P4XNdjqFLe4fv7qDL9Ikf9ZdhGaXDzOUyKAb1FwPVzQ8j_kuE1ubY6DEZPxQmF86Amx3JN_qlpkWxDSTcLr6w9z10sqvcPDv6BFLviRjtgehZh7O.czFOFzGL5K2ya.nZNQz7LafmC50p7GA69sNzT4zy0.uLLS0XfmkPY7mH083UICNU3rg_Ut5F9bgvZfxSEk6OfcZN39VItqJhq6xcH34CMg2wGwjmrjmf8_wFXbvYkm7spLIn0NaTqwf.4KCsw6ZAYoGrxujhw1QCkP2mrRg4UhF096i2XjiKMm1l9WOCseFRGaRdbOj7ChPUu9brIlkIWTBFd1SPCMDfuNjyK1CtZsMTOumlok8jqAR4EO65TPx0O6UgIMsY4s7uSygW7WzHb2g6IDb_wnlHFg5ihev5QUnog3w34QZpTj8S77yGtuDyYiCh0U0Tk7jIcnTkppZKZ1XIvVULIRJw_16aPyC72rc8KMeYJpFeJZrWRBmBUm&quot;,mdrd: &quot;Uj4fYov6rRkVN9e8LE6.skKYNtZOIdNNG3A1V36IaRA-1733936035-1.2.1.1-hzbTh8OSpeFJccv8aF5u.UMwUMTeOHqpE.Na1bwKXgAblRY0UN_L9EX70M7FupXdylI2r3ENB_54rfGkkgXDrKzyzuz9W2FvpCzcG9q1lU9hFfHBq..9SAlHPXJNs_u5RAoFPAQBIIettGzXAdltySaiKWwtt.ETopF0IDIW12_ym7chPw3rEzNYqKCe9YeAv2sR1oe45bOXNNcJ726tXXpbe_qXxCWSOoDHqDrs8ep3fGKAI07Uij.apRGGiXF4m.YLqZyF2D4uxhIuIM3JNsFLJ4t3MZHmFQURIZ6Mp.VEre60n73hRM2B07xdwZ83lYhgaaImSw.pHAoN2rZ4tmdJPl4dkaqB5gx4r2ghs9zAUjnTp5kkAf8TCVBZ4KvOd5Dj4aQEtUUYaP45GCeAQdFoAfFWfMyM0.IsI1Kf.3bTJiXEbXiYB4naiKjGdnrrlCkjcaMjXD8FSeWklWUJ4CzL2zm6M56SwLxriiOQzNIwoHImaYvjuiU0erbaRqUo3buutP5DEqgO.5v.pmoCCFswUST8ETBkZcbfdgVS1raL7TRshLRpWn4H4zBTjiaCctyHPyY8PdODncRwYnzY27kMUrWmtaRtertPQssuPTzTqUczf59nN7s78Vy5hXWPtfHjbM0T1MIrolYmAa2kuf9ZwFzIuud_t1Fpmk.94aRCKf2zWvTzYU7QIMG2Qx6XcExik5IHddDTseW_s8.Shk2Cwl3SNb9aKH2u2blkXnLcGKJxxLjjHAk1zON5yMkEcRhEgJebn8fKKC6nx.m9X2ige3hx2eeelvaY_78efBeU_n6ZXM_.Ul5lAys2ROcfROLkFDu615eKZzF9AsU6Gn5anECmw8M1D7hkANjFK_ktQzHRHGS2MEDAdWv_sx_bEw9r1POKq3LjP6wBHTNvx7Q8.qI.d5vpBiM_NvCpTewKbzwJpMlnerX9zR6QYDpJ7qADdrFTFovYrGHzcqKJmnuyaTmnT9I9ABxESt4_VE2xDl_8oUllZtI8rYHx9s.D4eKj3yg_nM92YwXvdmwjZ2DGAJzOwwhHT2QsHZH2RJr9sqqcKber_bdqClALgdt0Js5p6SBdM_TmPGEzpkRmRMqW.DB.2o9JaC62BHVz_7ToE.S8nHgnXB1SqMTo9Lnc8rFScUD3tqhHRLN892pHxNaAXLDvjPxaVtNibYF16_VhXP.qEdtuP8_mhyzP.ZEoowf0jgZUH_fLOGOFWF8ZvHFVcKpTmbocd3tsPtRpID0Uj1acCVqcTcsT1BzDmBUXVU_DnIg.lhJ2g8Z614hVHd3qcE0l1Gg2B_VlWUYJczVJlheSPKK09K9mNbtSyGqeVIP783Qzw5mxHIBvQ2wp1QsiiU0Bb6Ar4wQWS_FqImdJu2W6t9jG1BADKCuhfNY9K0qwwT7UyV8AObtlIOOYXPGyTwOH2uVSIpul2WsX2RywgsEjh5D7SuHL_RRjZO7vGYvE3WT5S7sBJTlAH5A6DoaRMcfTyvZxBaDKgs8gmSLpyFAJPPw17mqKA_nl2Xlzkem_Q34XvHRIeFuJCssg4Jdwqstb2NwDOnXnjcZFNAmxeTGCroDodcGJ0YYeNHATiw5lNF4E8OzPmQqwJXCrW1AvJjdfHKaaLGmqIKolFJEckm8rE1X.VtlZ8.UeLxrlC5O1yAEJSp3s_9r4FMm4Gjo.U_8aPDDDHEptSK8WHnwWuup1Ejv_784EAxir2TtmUhvmF.W1QJkAxDs1BJDQAQD5TsZ2ZIp742nQ3JBWTNCrpFL_zTqfGjpPGJ3QQmI0l9W.c2Xioo6c8KVUUEgGdmfZEZ6gQ_ZinbrtRzI9yW.yAKbytM2CxN9hhnEAO37_CtcpdbfATf_k1vZzNrxY0uhE8GAKynqj8abY4L4pUadveVlbM2mnLd.jJx7ULbS0f5EdHmJKWeYIdfxoE_rG3oaMDwefT5s2NM6tuEKuwG4N67zVZyvKODM7T1nRgDhViV.xvlSTH.1XMy1ThNb_T_tZyNP2HRei8raco.5ojVBodzFzcNWng60n_G_EzPnyhGvX2igwh9dkVp96OAyfUuTb7Qku2zZhPOl2fh9szA7_..j3abgkEVjKJDyp_bz_T.vV23Fk4L6yCM8dTuxMKFPXzV.NitdSp4rZNuDgVo8aZaPS72qL8w_Meb5ftHLz.Y3Z3Ubiq5z2fWJWTvfk1nOT11tpShpH51nrONvrYttntHC20D7NIZBDwvd_9VxCCXHYg_llK4Lleg1VwvXXD5arrjKsOjiPqYicygyVpJZQO99FOhofev.vHdw.kjDXoMXu9rmJ4.61_viYTr7soZlQp7XNL8CLI60kwgEAuWjtitM1BO7.JpLpyqN_lModfnydQhhSmItwX.PkSEJ9Q.zJbOATncna5bvHao6779E_2JSrnHpw4kZ8tfYwz67hCZ5.SMmDL.4LzB2lX2Fyw6n7PTIzeOtFczvKxyUMTN7ElevMOiKN3Tf..3buhrqAciwzbOL4FoRUo_x4dyN2eP1Bk0OxmUvcsoVJxpZv1gnjKxEBsKikoZtx_BtCVauVDT3V4htHKjM1XJnySQLdNTzEOPqQoXUkl3L0R87s8UjbsWRtsvdRYv1KM90L9Tqv5kOL6JgFoAYgnjH418uNebs_shAN.qrJHgrQi5Jbc_KWOYzhSVUJhNGhXxjuVi49wnmB3C62GnYQkY4OIocMkoU8CgwvEeEWfqHuESXtiJZ5NQXsyg8bDn7DDVoNFfVpWy4wnolXtBo8mPW37cYFrQ&quot;};var cpo = document.createElement(&apos;script&apos;);cpo.src = &apos;/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=8f06fe5adc10483e&apos;;window._cf_chl_opt.cOgUHash = location.hash === &apos;&apos; &amp;&amp; location.href.indexOf(&apos;#&apos;) !== -1 ? &apos;#&apos; : location.hash;window._cf_chl_opt.cOgUQuery = location.search === &apos;&apos; &amp;&amp; location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf(&apos;?&apos;) !== -1 ? &apos;?&apos; : location.search;if (window.history &amp;&amp; window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, &quot;\/wd\/hub\/session?__cf_chl_rt_tk=fHpYm0sd4uvmQ5febEOETCw7E6tVCsAm82dhgX4F3_g-1733936035-1.0.1.1-6e_BpL.jakofRaxz1faggIMkLfpeW2vo8tgLbsPaWOg&quot; + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName(&apos;head&apos;)[0].appendChild(cpo);}());&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 
+Host info: host: &apos;ip-192-168-1-11.ap-south-1.compute.internal&apos;, ip: &apos;2401:4900:1cd7:30e8:8ef:ca30:3be4:a8d3%en0&apos;
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:100)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at tester.WelUp.EmployerOnboard(WelUp.java:109)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:152)
+	at tester.WelUp.setup(WelUp.java:34)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -205,45 +172,31 @@ Session ID: 6dfc14ce8960a9781470ac635b3c7c66
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.json.JsonException: Unable to parse: &lt;!DOCTYPE html&gt;&lt;html lang=&quot;en-US&quot;&gt;&lt;head&gt;&lt;title&gt;Just a moment...&lt;/title&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&gt;&lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;style&gt;*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;max-width:60rem;padding-left:1.5rem}@media (width &lt;= 720px){.main-content{margin-top:4rem}}.h2{font-size:1.5rem;font-weight:500;line-height:2.25rem}@media (width &lt;= 720px){.h2{font-size:1.25rem;line-height:1.5rem}}#challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+);background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme:dark){body{background-color:#222;color:#d9d9d9}}&lt;/style&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;390&quot;&gt;&lt;/head&gt;&lt;body class=&quot;no-js&quot;&gt;&lt;div class=&quot;main-wrapper&quot; role=&quot;main&quot;&gt;&lt;div class=&quot;main-content&quot;&gt;&lt;noscript&gt;&lt;div class=&quot;h2&quot;&gt;&lt;span id=&quot;challenge-error-text&quot;&gt;Enable JavaScript and cookies to continue&lt;/span&gt;&lt;/div&gt;&lt;/noscript&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;(function(){window._cf_chl_opt={cvId: &apos;3&apos;,cZone: &quot;selenium-chrome.bikaneri.in&quot;,cType: &apos;managed&apos;,cRay: &apos;8f06fe5adc10483e&apos;,cH: &apos;PgMxyQsFuIWpWz71Khka5w6X22.Lvgg.TrWa48IGyz4-1733936035-1.2.1.1-3ia6vGOyTuFxepA_1ccfIyizfz1mJn6Sz02pePjPfvib1L1uHidU9A5lYn5zHoxz&apos;,cUPMDTk: &quot;\/wd\/hub\/session?__cf_chl_tk=fHpYm0sd4uvmQ5febEOETCw7E6tVCsAm82dhgX4F3_g-1733936035-1.0.1.1-6e_BpL.jakofRaxz1faggIMkLfpeW2vo8tgLbsPaWOg&quot;,cFPWv: &apos;g&apos;,cITimeS: &apos;1733936035&apos;,cTTimeMs: &apos;1000&apos;,cMTimeMs: &apos;390000&apos;,cTplC: 0,cTplV: 5,cTplB: &apos;cf&apos;,cK: &quot;&quot;,fa: &quot;\/wd\/hub\/session?__cf_chl_f_tk=fHpYm0sd4uvmQ5febEOETCw7E6tVCsAm82dhgX4F3_g-1733936035-1.0.1.1-6e_BpL.jakofRaxz1faggIMkLfpeW2vo8tgLbsPaWOg&quot;,md: &quot;AygAhxZ26viNAlAPvH5ehfrqcQEvZXsq9.XWiv.WiCw-1733936035-1.2.1.1-j36ieBbbTUAo.DUILrE5xy.5E_uzbwKwJT77V70Y_KVxmNHIBPAqpYRpWc0l4vi28FArRZwRFPGxt3PbDihVlYOj_YwlsBQ5NM5jQxLfSVAldSCp47lUTbcj7_kl6tzCf6KDNSyc6YcIz7.Ek5Seafx90kttujeg3iv5nWHelM1bwWiKGqfObr6vYSjOSO5koVYF2.QKG92GtKWcPS7KdQMWb6gU1bxUQaCQJAB2CheZtWI6RfReDS1oSRM72uID3yD1Ko6q508zj5Mb9XWN1O8SDvAm.8GySmyzSNuLD4Lkd7b8wxWJrsfTl2Phu_tRwLkmAC.eUehm4Ljs5o0OOi_OUldi4bUTGRp651kO93V.nFYLLaeRPLbbJJO4t06nIiQ5z.G4HrtFiJDVw9Evn5eL45nvh4OVraCbkrGXzpyzbBrX3jO1RAysRNW85QLtuqmCL.tINwnV0BPOGujhp113hWhDebhpqOoPpzNe7NqTFqegaYRp1UFRgFUOn2BvmIf6kH1jxzD1KKwIEkLjs4.bPUlrkp84JlG1zZrAe7wL3qVzaFwIRvft.F.Nc3MGdmL17fKsASVbl9hPMzmusdqsI1WeFyEJCOyOFAPMHU.922OyqbLWDVDr2SLZfXRvpN5t3nLVFI8qTzwTYPKh2n1NoC0FxK6ct.Gxe3LQth38LfiT7KiruwEBY2gKN8_Yqb4U3EYHweccxps4F.hPL1y6n8UMBP6fnl1ZYM_OSHBdaXNTeGSyvCU.r9iAvTB4o0tO23aGQh6mWTC4pTuAvcq6KZuotZAU6ylwAxKnS8BnPrqGy0m.9Vx1aZlR5Q_ZStTDiZyxKng3VP1VbvKCvbBH9nuT7OqvK6Nz3Ut0WZoCPrmzU3xr9.G94ff0QpHONEsVQmRq0fC.9ckRagADWLCzHfmuK3h1pIJqZWE0VWBkSi0wOWEgHaPt0X9ZFlirdHCHOQDRA0xg1vMj4s_UUmTZdxFeLK8wjPCfk5_h9krXuoRAIdvaDBeKYQjQpXzN1S5pyH4lzGILSOXJKJ3ErAVe6Ai3yUcc_nog4h6zyGS3VR0NUQAMXRbqxVJ2nSxKgneG7VowQ.ovkOmu1xHAlypzCDN9CVFFC5pUq1dQO.1SclHp1NhGzr9FUbrH9ik266J4blY.vl4MYMJvb9CRFWUVPiESzjkLffbeq6v8jQ6Iw1mvCo57nttWFya.KOW9M0QRqivGIf.Bjf6wesYhtjjV_9sJYKDmljUA49nc8OL.GIyejXKlJeOWKRngqg7BxRLgGZb8AXq.WfYNzphQe.nxQZdJw6nMgg25A2c9.YqjhmzVsDpAdd35ywyaPrXol7sO47FNEziNnpxtBQBw6OgoHxBDSbYGhAbYZKrqMNqC_IKBTYAyNRchNFM8o2Ttz3Q5IBFxc_.vQ9UZy3gSkcxHjJXybKkVrTzL2.RA9QVWhJNt.i.jAqBpKPSYGqo3h.PdGuxUKH72nrFdOUjoUOj2hbcI_Id1As70Zk6LUaf77hg4Q1.6kgQw45lm54oxx9o02WGh8yEotv4IB4HvkYRenBj.lA2GOUuAEIaIc6PWkF.SXxcj.VYm4FuhEgVaqnRE1yTv73NnNPX2Npx2pduDpyL4ICVQtz.p4YXym7mV0sF_Dq9IujitrmbdmhGxRRq6cvZNCYDECzbu3P4XNdjqFLe4fv7qDL9Ikf9ZdhGaXDzOUyKAb1FwPVzQ8j_kuE1ubY6DEZPxQmF86Amx3JN_qlpkWxDSTcLr6w9z10sqvcPDv6BFLviRjtgehZh7O.czFOFzGL5K2ya.nZNQz7LafmC50p7GA69sNzT4zy0.uLLS0XfmkPY7mH083UICNU3rg_Ut5F9bgvZfxSEk6OfcZN39VItqJhq6xcH34CMg2wGwjmrjmf8_wFXbvYkm7spLIn0NaTqwf.4KCsw6ZAYoGrxujhw1QCkP2mrRg4UhF096i2XjiKMm1l9WOCseFRGaRdbOj7ChPUu9brIlkIWTBFd1SPCMDfuNjyK1CtZsMTOumlok8jqAR4EO65TPx0O6UgIMsY4s7uSygW7WzHb2g6IDb_wnlHFg5ihev5QUnog3w34QZpTj8S77yGtuDyYiCh0U0Tk7jIcnTkppZKZ1XIvVULIRJw_16aPyC72rc8KMeYJpFeJZrWRBmBUm&quot;,mdrd: &quot;Uj4fYov6rRkVN9e8LE6.skKYNtZOIdNNG3A1V36IaRA-1733936035-1.2.1.1-hzbTh8OSpeFJccv8aF5u.UMwUMTeOHqpE.Na1bwKXgAblRY0UN_L9EX70M7FupXdylI2r3ENB_54rfGkkgXDrKzyzuz9W2FvpCzcG9q1lU9hFfHBq..9SAlHPXJNs_u5RAoFPAQBIIettGzXAdltySaiKWwtt.ETopF0IDIW12_ym7chPw3rEzNYqKCe9YeAv2sR1oe45bOXNNcJ726tXXpbe_qXxCWSOoDHqDrs8ep3fGKAI07Uij.apRGGiXF4m.YLqZyF2D4uxhIuIM3JNsFLJ4t3MZHmFQURIZ6Mp.VEre60n73hRM2B07xdwZ83lYhgaaImSw.pHAoN2rZ4tmdJPl4dkaqB5gx4r2ghs9zAUjnTp5kkAf8TCVBZ4KvOd5Dj4aQEtUUYaP45GCeAQdFoAfFWfMyM0.IsI1Kf.3bTJiXEbXiYB4naiKjGdnrrlCkjcaMjXD8FSeWklWUJ4CzL2zm6M56SwLxriiOQzNIwoHImaYvjuiU0erbaRqUo3buutP5DEqgO.5v.pmoCCFswUST8ETBkZcbfdgVS1raL7TRshLRpWn4H4zBTjiaCctyHPyY8PdODncRwYnzY27kMUrWmtaRtertPQssuPTzTqUczf59nN7s78Vy5hXWPtfHjbM0T1MIrolYmAa2kuf9ZwFzIuud_t1Fpmk.94aRCKf2zWvTzYU7QIMG2Qx6XcExik5IHddDTseW_s8.Shk2Cwl3SNb9aKH2u2blkXnLcGKJxxLjjHAk1zON5yMkEcRhEgJebn8fKKC6nx.m9X2ige3hx2eeelvaY_78efBeU_n6ZXM_.Ul5lAys2ROcfROLkFDu615eKZzF9AsU6Gn5anECmw8M1D7hkANjFK_ktQzHRHGS2MEDAdWv_sx_bEw9r1POKq3LjP6wBHTNvx7Q8.qI.d5vpBiM_NvCpTewKbzwJpMlnerX9zR6QYDpJ7qADdrFTFovYrGHzcqKJmnuyaTmnT9I9ABxESt4_VE2xDl_8oUllZtI8rYHx9s.D4eKj3yg_nM92YwXvdmwjZ2DGAJzOwwhHT2QsHZH2RJr9sqqcKber_bdqClALgdt0Js5p6SBdM_TmPGEzpkRmRMqW.DB.2o9JaC62BHVz_7ToE.S8nHgnXB1SqMTo9Lnc8rFScUD3tqhHRLN892pHxNaAXLDvjPxaVtNibYF16_VhXP.qEdtuP8_mhyzP.ZEoowf0jgZUH_fLOGOFWF8ZvHFVcKpTmbocd3tsPtRpID0Uj1acCVqcTcsT1BzDmBUXVU_DnIg.lhJ2g8Z614hVHd3qcE0l1Gg2B_VlWUYJczVJlheSPKK09K9mNbtSyGqeVIP783Qzw5mxHIBvQ2wp1QsiiU0Bb6Ar4wQWS_FqImdJu2W6t9jG1BADKCuhfNY9K0qwwT7UyV8AObtlIOOYXPGyTwOH2uVSIpul2WsX2RywgsEjh5D7SuHL_RRjZO7vGYvE3WT5S7sBJTlAH5A6DoaRMcfTyvZxBaDKgs8gmSLpyFAJPPw17mqKA_nl2Xlzkem_Q34XvHRIeFuJCssg4Jdwqstb2NwDOnXnjcZFNAmxeTGCroDodcGJ0YYeNHATiw5lNF4E8OzPmQqwJXCrW1AvJjdfHKaaLGmqIKolFJEckm8rE1X.VtlZ8.UeLxrlC5O1yAEJSp3s_9r4FMm4Gjo.U_8aPDDDHEptSK8WHnwWuup1Ejv_784EAxir2TtmUhvmF.W1QJkAxDs1BJDQAQD5TsZ2ZIp742nQ3JBWTNCrpFL_zTqfGjpPGJ3QQmI0l9W.c2Xioo6c8KVUUEgGdmfZEZ6gQ_ZinbrtRzI9yW.yAKbytM2CxN9hhnEAO37_CtcpdbfATf_k1vZzNrxY0uhE8GAKynqj8abY4L4pUadveVlbM2mnLd.jJx7ULbS0f5EdHmJKWeYIdfxoE_rG3oaMDwefT5s2NM6tuEKuwG4N67zVZyvKODM7T1nRgDhViV.xvlSTH.1XMy1ThNb_T_tZyNP2HRei8raco.5ojVBodzFzcNWng60n_G_EzPnyhGvX2igwh9dkVp96OAyfUuTb7Qku2zZhPOl2fh9szA7_..j3abgkEVjKJDyp_bz_T.vV23Fk4L6yCM8dTuxMKFPXzV.NitdSp4rZNuDgVo8aZaPS72qL8w_Meb5ftHLz.Y3Z3Ubiq5z2fWJWTvfk1nOT11tpShpH51nrONvrYttntHC20D7NIZBDwvd_9VxCCXHYg_llK4Lleg1VwvXXD5arrjKsOjiPqYicygyVpJZQO99FOhofev.vHdw.kjDXoMXu9rmJ4.61_viYTr7soZlQp7XNL8CLI60kwgEAuWjtitM1BO7.JpLpyqN_lModfnydQhhSmItwX.PkSEJ9Q.zJbOATncna5bvHao6779E_2JSrnHpw4kZ8tfYwz67hCZ5.SMmDL.4LzB2lX2Fyw6n7PTIzeOtFczvKxyUMTN7ElevMOiKN3Tf..3buhrqAciwzbOL4FoRUo_x4dyN2eP1Bk0OxmUvcsoVJxpZv1gnjKxEBsKikoZtx_BtCVauVDT3V4htHKjM1XJnySQLdNTzEOPqQoXUkl3L0R87s8UjbsWRtsvdRYv1KM90L9Tqv5kOL6JgFoAYgnjH418uNebs_shAN.qrJHgrQi5Jbc_KWOYzhSVUJhNGhXxjuVi49wnmB3C62GnYQkY4OIocMkoU8CgwvEeEWfqHuESXtiJZ5NQXsyg8bDn7DDVoNFfVpWy4wnolXtBo8mPW37cYFrQ&quot;};var cpo = document.createElement(&apos;script&apos;);cpo.src = &apos;/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=8f06fe5adc10483e&apos;;window._cf_chl_opt.cOgUHash = location.hash === &apos;&apos; &amp;&amp; location.href.indexOf(&apos;#&apos;) !== -1 ? &apos;#&apos; : location.hash;window._cf_chl_opt.cOgUQuery = location.search === &apos;&apos; &amp;&amp; location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf(&apos;?&apos;) !== -1 ? &apos;?&apos; : location.search;if (window.history &amp;&amp; window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, &quot;\/wd\/hub\/session?__cf_chl_rt_tk=fHpYm0sd4uvmQ5febEOETCw7E6tVCsAm82dhgX4F3_g-1733936035-1.0.1.1-6e_BpL.jakofRaxz1faggIMkLfpeW2vo8tgLbsPaWOg&quot; + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName(&apos;head&apos;)[0].appendChild(cpo);}());&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+	at org.openqa.selenium.json.Json.toType(Json.java:169)
+	at org.openqa.selenium.json.Json.toType(Json.java:152)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	... 39 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;, next 128 characters to read: !DOCTYPE html&gt;&lt;html lang=&quot;en-US&quot;&gt;&lt;head&gt;&lt;title&gt;Just a moment...&lt;/title&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charse
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.6.3&apos;, java.version: &apos;22&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:166)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$buildCoercer$6(JsonTypeCoercer.java:167)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:146)
+	at org.openqa.selenium.json.Json.toType(Json.java:206)
+	at org.openqa.selenium.json.Json.toType(Json.java:167)
+	... 41 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tester.WelUp</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="AddEmployee">
-                  </a> <!-- AddEmployee -->
-                  <span class="method-name">AddEmployee</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="DeleteEmployee">
-                  </a> <!-- DeleteEmployee -->
-                  <span class="method-name">DeleteEmployee</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Login">
-                  </a> <!-- Login -->
-                  <span class="method-name">Login</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/ky/71_r8yx13y94_wkywcqcn6_80000gn/T/testng-eclipse-1384731480/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/ky/71_r8yx13y94_wkywcqcn6_80000gn/T/testng-eclipse-321311767/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -252,7 +205,11 @@ Session ID: 6dfc14ce8960a9781470ac635b3c7c66
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tester.WelUp&quot;/&gt;
+      &lt;class name=&quot;tester.WelUp&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;EmployerOnboard&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tester.WelUp --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -292,28 +249,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'EmployerOnboard')
 data.setCell(0, 2, 'tester.WelUp')
-data.setCell(0, 3, 6996);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'AddEmployee')
-data.setCell(1, 2, 'tester.WelUp')
-data.setCell(1, 3, 4129);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Login')
-data.setCell(2, 2, 'tester.WelUp')
-data.setCell(2, 3, 2486);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'DeleteEmployee')
-data.setCell(3, 2, 'tester.WelUp')
-data.setCell(3, 3, 1690);
+data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -328,9 +273,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tester.WelUp</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AddEmployee</span>
+                <br/>
+                <span class="ignored-method-name">DeleteEmployee</span>
+                <br/>
+                <span class="ignored-method-name">Login</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -341,39 +297,19 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tester.WelUp</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">EmployerOnboard</span>
-                <span class="method-start">12 ms</span>
+                <span class="method-start">4271 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">7039 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Login</span>
-                <span class="method-start">7059 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">9547 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">AddEmployee</span>
-                <span class="method-start">9561 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">13692 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">DeleteEmployee</span>
-                <span class="method-start">13698 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanup</span>
+                <span class="method-start">4296 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
