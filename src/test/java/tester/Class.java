@@ -1,5 +1,7 @@
 package tester;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.By;
@@ -19,8 +21,8 @@ public class Class {
 
    // public WebDriver driver;
     WebDriver driver = new ChromeDriver();
-    String URL = "https://q.savein.money/OdYm";
-    String PAN = "BDBPS9453C";
+    String URL = "https://q.savein.money/VFhm";
+    String PAN = "ALKPB5263D";
     
     
     
@@ -244,7 +246,8 @@ public class Class {
     }
     
 
-    @AfterMethod
+
+	@AfterMethod
     public void tearDown() {
         driver.quit();
     }

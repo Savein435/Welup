@@ -1,5 +1,7 @@
 package tester;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.By;
@@ -63,7 +65,7 @@ public class WelUp {
         //Email
         WebElement Email = driver.findElement(By.cssSelector("body > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)"));
         Email.clear();
-        Email.sendKeys("randomeirui@gmail.com");
+        Email.sendKeys("jkhdjk32223@gmail.com");
         System.out.println("Valid Email Check Passed");
         Thread.sleep(2000);
         //Send OTP 
@@ -137,7 +139,7 @@ public class WelUp {
         WebElement Email = driver.findElement(By.xpath("//input[@id='inputid']"));
        Email.click();
        Email.clear();
-       Email.sendKeys("dogroppicare-3776@yopmail.com");
+       Email.sendKeys("anurag.singh@savein.money");
        System.out.println("Email Entered ");
        Thread.sleep(200);
        
@@ -234,9 +236,6 @@ public class WelUp {
     
    
    
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+	
 }
 

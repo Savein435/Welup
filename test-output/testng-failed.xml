@@ -5,8 +5,7 @@
     <classes>
       <class name="tester.WelUp">
         <methods>
-          <include name="AddEmployee"/>
-          <include name="tearDown"/>
+          <include name="EmployerOnboard"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tester.WelUp -->

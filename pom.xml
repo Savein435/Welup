@@ -41,6 +41,12 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.13.0</version>
     </dependency>
+    <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.7.1</version> <!-- Use the latest stable version -->
+    <scope>test</scope>
+</dependency>
 
 
   </dependencies>
