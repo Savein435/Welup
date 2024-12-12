@@ -23,7 +23,7 @@ public class WelUp {
     @BeforeMethod
     public void setup() {
         // Set up WebDriver and configure the browser settings
-        WebDriverManager.chromedriver().setup();
+        
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
