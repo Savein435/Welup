@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -24,7 +25,7 @@ public class WelUp {
     public void setup() {
         // Set up WebDriver and configure the browser settings
         
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
@@ -36,6 +37,22 @@ public class WelUp {
             driver.quit();
         }
     }
+    @Test
+    public void testWelup() throws Exception {
+      driver.get("https://qa.welup.savein.money/signup");
+      driver.findElement(By.id("inputid")).click();
+      driver.findElement(By.id("inputid")).clear();
+      driver.findElement(By.id("inputid")).sendKeys("Ayush");
+      driver.findElement(By.xpath("//div[2]/div/div[2]/input")).clear();
+      driver.findElement(By.xpath("//div[2]/div/div[2]/input")).sendKeys("7378389247");
+      driver.findElement(By.xpath("//div[3]/div[3]/div/div/div[2]/input")).click();
+      driver.findElement(By.xpath("//div[3]/div[3]/div/div/div[2]/input")).clear();
+      driver.findElement(By.xpath("//div[3]/div[3]/div/div/div[2]/input")).sendKeys("jksahdgjkas@gmail.com");
+      driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Work Email ID'])[1]/following::button[1]")).click();
+      driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Work Email ID'])[1]/following::button[1]")).click();
+      driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Department'])[1]/following::button[1]")).click();
+    }
+
 
     @Test(priority = 1)
     public void EmployerOnboard() throws InterruptedException {
@@ -115,13 +132,13 @@ public class WelUp {
 
     // Helper Methods
     private void enterName(String name) {
-        WebElement nameField = driver.findElement(By.cssSelector("input[placeholder='Enter your name']"));
+        WebElement nameField = driver.findElement(By.xpath("//div[@class='w-full md:w-//input[@id='inputid']"));
         nameField.clear();
         nameField.sendKeys(name);
     }
 
     private void enterMobileNumber(String mobile) {
-        WebElement mobileField = driver.findElement(By.cssSelector("input[placeholder='Enter mobile number']"));
+        WebElement mobileField = driver.findElement(By.xpath("//div[@class='w-full md:w-//input[@id='inputid']"));
         mobileField.clear();
         mobileField.sendKeys(mobile);
     }
@@ -204,4 +221,6 @@ public class WelUp {
         WebElement submitButton = driver.findElement(By.cssSelector("button[type='submit']"));
         submitButton.click();
     }
+    
+    
 }
