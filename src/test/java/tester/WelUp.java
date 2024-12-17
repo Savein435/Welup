@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -23,8 +24,12 @@ public class WelUp {
     @BeforeMethod
     public void setup() {
         // Set up WebDriver and configure the browser settings
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+    	ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless"); // Enable headless mode
+        options.addArguments("--disable-gpu"); // Disable GPU for compatibility
+        options.addArguments("--window-size=1920,1080"); // Set window size
+        
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
@@ -36,92 +41,34 @@ public class WelUp {
             driver.quit();
         }
     }
-
     @Test(priority = 1)
-    public void EmployerOnboard() throws InterruptedException {
-        driver.get(URL);   
-        
-        // Enter Name
-        enterName("Ayush Tiwari");
-
-        // Enter Mobile Number
-        enterMobileNumber("3987782873849723");
-
-        // Enter Email
-        enterEmail("jkhdjk32223@gmail.com");
-
-        // Send OTP and Verify
-        sendOTP("1111111");
-
-        // Select Designation
-        selectDesignation("HR");
-
-        // Submit Details
-        submitDetails();
-
-        // Manual Company Name Entry
-        enterCompanyName("Test Company Entry");
-
-        // Continue Button Click
-        clickContinueButton();
-
-        // Plan Overview Continue
-        clickContinueButton();
-        
-        // Book Activation Meeting
-        bookActivationMeeting();
+    public void testWelup() throws Exception {
+      driver.get("https://qa.welup.savein.money/signup");
+      driver.findElement(By.id("inputid")).click();
+      driver.findElement(By.id("inputid")).clear();
+      driver.findElement(By.id("inputid")).sendKeys("Ayush");
+      driver.findElement(By.xpath("//div[2]/div/div[2]/input")).clear();
+      driver.findElement(By.xpath("//div[2]/div/div[2]/input")).sendKeys("7378389247");
+      driver.findElement(By.xpath("//div[3]/div[3]/div/div/div[2]/input")).click();
+      driver.findElement(By.xpath("//div[3]/div[3]/div/div/div[2]/input")).clear();
+      driver.findElement(By.xpath("//div[3]/div[3]/div/div/div[2]/input")).sendKeys("jksahdgjkas@gmail.com");
+      driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Work Email ID'])[1]/following::button[1]")).click();
+      driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Work Email ID'])[1]/following::button[1]")).click();
+      driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Department'])[1]/following::button[1]")).click();
     }
 
-    @Test(priority = 2)
-    public void Login() throws InterruptedException {
-        driver.get("https://qa.welup.savein.money/login");
 
-        // Enter Email
-        enterEmail("anurag.singh@savein.money");
-
-        // Continue and submit OTP
-        submitOTP("111111");
-    }
-
-    @Test(priority = 3)
-    public void AddEmployee() throws InterruptedException {
-        // Employee Login
-        Login();
-
-        // Navigate to Employee Management
-        WebElement employeeManagement = driver.findElement(By.xpath("//button[normalize-space()='Employee Management']"));
-        employeeManagement.click();
-
-        // Add Employee Button Click
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
-        WebElement addEmployee = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[contains(text(),'Add Employee')])[1]")));
-        addEmployee.click();
-
-        // Add Employees via Form
-        addEmployeeViaForm("Ayush Tiwari", "randomworkemail@gmail.com", "9928492949", "SI38390");
-    }
-
-    @Test(priority = 4)
-    public void DeleteEmployee() throws InterruptedException {
-        // Employee Login
-        Login();
-
-        // Navigate to Employee Management
-        WebElement employeeManagement = driver.findElement(By.xpath("//button[normalize-space()='Employee Management']"));
-        employeeManagement.click();
-
-        // Add logic for deleting employee if necessary
-    }
+    
 
     // Helper Methods
     private void enterName(String name) {
-        WebElement nameField = driver.findElement(By.cssSelector("input[placeholder='Enter your name']"));
+        WebElement nameField = driver.findElement(By.xpath("//div[@class='w-full md:w-//input[@id='inputid']"));
         nameField.clear();
         nameField.sendKeys(name);
     }
 
     private void enterMobileNumber(String mobile) {
-        WebElement mobileField = driver.findElement(By.cssSelector("input[placeholder='Enter mobile number']"));
+        WebElement mobileField = driver.findElement(By.xpath("//div[@class='w-full md:w-//input[@id='inputid']"));
         mobileField.clear();
         mobileField.sendKeys(mobile);
     }
@@ -204,4 +151,6 @@ public class WelUp {
         WebElement submitButton = driver.findElement(By.cssSelector("button[type='submit']"));
         submitButton.click();
     }
+    
+    
 }

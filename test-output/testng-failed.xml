@@ -3,12 +3,32 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tester.WelUp">
+      <class name="tester.SignUp">
         <methods>
-          <include name="EmployerOnboard"/>
+          <include name="beforeMethod"/>
+          <include name="f"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- tester.SignUp -->
+      <class name="tester.Class">
+        <methods>
+          <include name="CustomerLogin"/>
+          <include name="Professional"/>
+          <include name="Adhaar"/>
+          <include name="Pan"/>
+          <include name="CCFLOw"/>
+          <include name="Selfie"/>
+          <include name="tearDown"/>
+          <include name="Criff"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tester.WelUp -->
+      </class> <!-- tester.Class -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
