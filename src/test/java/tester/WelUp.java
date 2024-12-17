@@ -44,7 +44,7 @@ public class WelUp {
     @Test(priority = 1)
     public void testWelup() throws Exception {
       driver.get("https://qa.welup.savein.money/signup");
-      driver.findElement(By.id("inputid")).click();
+      driver.findElement(By.xpath("inputid")).click();
       driver.findElement(By.id("inputid")).clear();
       driver.findElement(By.id("inputid")).sendKeys("Ayush");
       driver.findElement(By.xpath("//div[2]/div/div[2]/input")).clear();
