@@ -43,9 +43,9 @@ jobs:
         export DISPLAY=:99
         nohup Xvfb :99 -ac &
 
-    # Step 6: Build with Maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    # Step 6: Build with Maven and run TestNG tests using testng.xml
+    - name: Run Maven TestNG Tests
+      run: mvn -B test -DsuiteXmlFile=testng.xml --file pom.xml
 
     # Step 7: Update dependency graph (optional)
     - name: Update dependency graph
